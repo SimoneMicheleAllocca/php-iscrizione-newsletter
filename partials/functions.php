@@ -13,18 +13,18 @@ function control_email($email) {
   // Controlla se l'email è vuota
   if (empty($email)) {
     $result["success"] = false;
-    $result["message"] = "Inserisci email"; // Messaggio di errore se l'email è vuota
+    $result["message"] = "Inserisci email"; // errore se l'email è vuota
   } 
   // Controlla se l'email non è valida
   else if (!email_valid($email)) {
     $result["success"] = false;
-    $result["message"] = "Email deve contenere una @ e un punto"; // Messaggio di errore se l'email non è valida
+    $result["message"] = "Email deve contenere una @ e un punto"; // errore se l'email non è valida
   } 
   // Se l'email è valida
   else {
     $result["success"] = true;
-    $result["message"] = "Grazie per esserti iscritto! Manderemo aggiornamenti alla tua email {$email}"; // Messaggio di successo
+    $result["message"] = "Grazie per esserti iscritto! Manderemo aggiornamenti alla tua email {$email}"; //successo
   }
 
-  return $result; // Restituisce il risultato del controllo
+  return $result; 
 }
